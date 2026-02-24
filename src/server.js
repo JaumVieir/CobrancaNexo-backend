@@ -187,4 +187,8 @@ app.get("/api/dados", async (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 3000, () => console.log("API ok"));
+const port = process.env.PORT || 3000;
+
+app.listen(port, "0.0.0.0", () => {
+  console.log("API ok on port", port);
+});
